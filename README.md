@@ -1,13 +1,4 @@
----
-title: Application Obfuscation on iOS
-published: false
-description: Obfuscate your iOS Application with Dexprotector
-tags: Security, iOS
----
-
 ### Introduction
-
----
 
 As explained on [Wikipedia](https://en.wikipedia.org/wiki/Obfuscation_(software))
 > In software development, obfuscation is the deliberate act of creating source or machine code that is difficult for humans to understand.
@@ -57,8 +48,6 @@ As we want to obfuscate our iOS application, we first have to install Dexprotect
 
 ## 1. Install Homebrew Package Manager
 
-----
-
 [Homebrew](https://brew.sh/) is the package manager that Apple is missing on MacOS.
 
 Install [Homebrew](https://brew.sh/) on your MacOS if you didn't do it yet.
@@ -71,8 +60,6 @@ To install Homebrew, just paste that in a macOS Terminal prompt.
 ```
 
 ## 2. Install Jenv to handle multiple Java JDK
-
-----
 
 It is good to manage the Java Jdk you are going to use based on the location of your project.
 
@@ -112,8 +99,6 @@ Or just close and reopen your Terminal.
 
 ## 3. Install Java JDK 8
 
-----
-
 To use Dexprotector on MacOS, it is mandatory to use the Java JDK 8 because of a deprecated Java method that Dexprotector is using.
 
 Indeed, on the latest MacOS (Mojave) Java is installed by default. The default Java JDK is JDK 12.
@@ -148,8 +133,6 @@ jenv versions
 You should see that the `openjdk64-1.8.0.212`and `oracle64-12.0.1` are added to jenv.
 
 ## 4. Apple Developer Console Configuration
-
-----
 
 In order to make Dexprotector running to obfuscate iOS applications, we have to get some information from the Apple Developer account that is publishing the application.
 
@@ -207,8 +190,6 @@ security find-identity -v -p codesigning
 You should see you new signing identity properly installed and available on your Mac.
 
 ## 5. Install and Configure Dexprotector on iOS
-
-----
 
 ### 5.1 Retrieve Dexprotector Packages
 
@@ -292,8 +273,6 @@ java -jar dexprotector.jar -info
 ```
 
 ### 6. Script to Automate It
-
-----
 
 To Automate all of this, I created a script that you can use to do all of that at once.
 
